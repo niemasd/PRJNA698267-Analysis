@@ -13,3 +13,13 @@ minimap2 -t 2 -d data/ref/NC_045512.2.fas.mmi data/ref/NC_045512.2.fas > data/re
 * **Input:** [`NC_045512.2.fas`](data/ref/NC_045512.2.fas)
 * **Output:** [`NC_045512.2.fas.mmi`](data/ref/NC_045512.2.fas.mmi)
 * **Log:** [`NC_045512.2.fas.mmi.log`](data/ref/NC_045512.2.fas.mmi.log)
+
+## 1.2: Map Reads
+Some of the FASTQ files are large, so rather than downloading them locally, I will map reads on-the-fly *while* downloading. The individual Minimap2 command is as follows:
+
+```bash
+minimap2 -t THREADS -a -x sr REF.MMI READ1.FASTQ.GZ READ2.FASTQ.GZ | samtools sort --threads THREADS -o SORTED.BAM
+```
+* `-a` means "output in the SAM format"
+* `-x sr` means "use Minimap2's genomic short-read mapping preset"
+  * From Wang *et al*.: "sequenced on the MGISEQ-2000 platform to generate data of **100-bp** paired-end reads"
