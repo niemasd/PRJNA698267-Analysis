@@ -23,3 +23,15 @@ minimap2 -t THREADS -a -x sr REF.MMI READ1.FASTQ.GZ READ2.FASTQ.GZ | samtools so
 * `-a` means "output in the SAM format"
 * `-x sr` means "use Minimap2's genomic short-read mapping preset"
   * From Wang *et al*.: "sequenced on the MGISEQ-2000 platform to generate data of **100-bp** paired-end reads"
+
+However, I'll use named pipes for the FASTQ files to download + map on-the-fly, and I'll throw out unmapped reads (via Minimap2's `--sam-hit-only` flag):
+
+```bash
+minimap2 --sam-hit-only -t THREADS -a -x sr REF.MMI <(fasterq-dump SRR_NUMBER --concatenate-reads --stdout) | samtools sort --threads THREADS -o SORTED.BAM
+```
+
+Putting everything together, here's the looped command for doing everything:
+
+```bash
+for s in $(cat data/fastq/SraAccList.txt) ; do minimap2 --sam-hit-only -t 1 -a -x sr data/ref/NC_045512.2.fas.mmi <(fasterq-dump $s --concatenate-reads --stdout) 2> "data/bam/$s.01.sorted.untrimmed.bam.log" | samtools sort --threads 1 -o "data/bam/$s.01.sorted.untrimmed.bam" ; done
+```
