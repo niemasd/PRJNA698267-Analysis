@@ -1,0 +1,16 @@
+[WARNING][1;31m Indexing parameters (-k, -w or -H) overridden by parameters used in the prebuilt index.[0m
+[M::main::0.019*1.67] loaded/built the index for 1 target sequence(s)
+[M::mm_mapopt_update::0.019*1.65] mid_occ = 1000
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 1
+[M::mm_idx_stat::0.019*2.41] distinct minimizers: 5587 (99.93% are singletons); average occurrences: 1.004; average spacing: 5.332; total length: 29903
+[M::worker_pipeline::168.575*0.17] mapped 500999 sequences
+[M::worker_pipeline::172.039*0.27] mapped 500962 sequences
+[M::worker_pipeline::175.279*0.38] mapped 500978 sequences
+[M::worker_pipeline::177.926*0.45] mapped 500966 sequences
+[M::worker_pipeline::181.199*0.55] mapped 500992 sequences
+[M::worker_pipeline::183.400*0.60] mapped 500958 sequences
+[M::worker_pipeline::185.452*0.64] mapped 500969 sequences
+[M::worker_pipeline::186.960*0.64] mapped 495610 sequences
+[M::main] Version: 2.24-r1122
+[M::main] CMD: minimap2 --sam-hit-only -t 6 -a -x sr data/ref/NC_045512.2.fas.mmi /dev/fd/63
+[M::main] Real time: 186.999 sec; CPU: 119.828 sec; Peak RSS: 0.583 GB

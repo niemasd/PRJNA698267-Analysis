@@ -1,0 +1,46 @@
+[WARNING][1;31m Indexing parameters (-k, -w or -H) overridden by parameters used in the prebuilt index.[0m
+[M::main::0.019*0.84] loaded/built the index for 1 target sequence(s)
+[M::mm_mapopt_update::0.019*0.83] mid_occ = 1000
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 1
+[M::mm_idx_stat::0.019*0.81] distinct minimizers: 5587 (99.93% are singletons); average occurrences: 1.004; average spacing: 5.332; total length: 29903
+[M::worker_pipeline::778.350*0.04] mapped 500699 sequences
+[M::worker_pipeline::780.751*0.05] mapped 500681 sequences
+[M::worker_pipeline::784.663*0.09] mapped 500694 sequences
+[M::worker_pipeline::786.958*0.10] mapped 500694 sequences
+[M::worker_pipeline::789.633*0.12] mapped 500692 sequences
+[M::worker_pipeline::792.664*0.14] mapped 500669 sequences
+[M::worker_pipeline::794.878*0.16] mapped 500697 sequences
+[M::worker_pipeline::797.304*0.18] mapped 500680 sequences
+[M::worker_pipeline::800.157*0.20] mapped 500675 sequences
+[M::worker_pipeline::802.355*0.21] mapped 500698 sequences
+[M::worker_pipeline::804.828*0.23] mapped 500674 sequences
+[M::worker_pipeline::807.659*0.25] mapped 500680 sequences
+[M::worker_pipeline::809.920*0.26] mapped 500688 sequences
+[M::worker_pipeline::812.262*0.28] mapped 500700 sequences
+[M::worker_pipeline::815.236*0.30] mapped 500699 sequences
+[M::worker_pipeline::817.503*0.32] mapped 500681 sequences
+[M::worker_pipeline::819.886*0.33] mapped 500684 sequences
+[M::worker_pipeline::822.900*0.35] mapped 500692 sequences
+[M::worker_pipeline::824.992*0.36] mapped 500701 sequences
+[M::worker_pipeline::827.473*0.38] mapped 500694 sequences
+[M::worker_pipeline::830.393*0.40] mapped 500685 sequences
+[M::worker_pipeline::832.589*0.41] mapped 500703 sequences
+[M::worker_pipeline::835.003*0.43] mapped 500690 sequences
+[M::worker_pipeline::838.394*0.45] mapped 500688 sequences
+[M::worker_pipeline::840.396*0.46] mapped 500680 sequences
+[M::worker_pipeline::842.307*0.47] mapped 500693 sequences
+[M::worker_pipeline::845.405*0.49] mapped 500679 sequences
+[M::worker_pipeline::847.891*0.50] mapped 500677 sequences
+[M::worker_pipeline::850.352*0.52] mapped 500700 sequences
+[M::worker_pipeline::853.562*0.54] mapped 500681 sequences
+[M::worker_pipeline::856.151*0.55] mapped 500672 sequences
+[M::worker_pipeline::906.305*0.55] mapped 500691 sequences
+[M::worker_pipeline::910.924*0.56] mapped 500709 sequences
+[M::worker_pipeline::913.274*0.56] mapped 500689 sequences
+[M::worker_pipeline::915.689*0.58] mapped 500677 sequences
+[M::worker_pipeline::919.330*0.60] mapped 500697 sequences
+[M::worker_pipeline::920.552*0.60] mapped 500692 sequences
+[M::worker_pipeline::921.657*0.60] mapped 357975 sequences
+[M::main] Version: 2.24-r1122
+[M::main] CMD: minimap2 --sam-hit-only -t 6 -a -x sr data/ref/NC_045512.2.fas.mmi /dev/fd/63
+[M::main] Real time: 921.678 sec; CPU: 554.656 sec; Peak RSS: 0.609 GB
