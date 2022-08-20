@@ -35,3 +35,5 @@ Putting everything together, here's the looped command for doing everything:
 ```bash
 for s in $(cat data/fastq/SraAccList.txt) ; do minimap2 --sam-hit-only -t 1 -a -x sr data/ref/NC_045512.2.fas.mmi <(fasterq-dump $s --concatenate-reads --stdout) 2> "data/bam/$s.01.sorted.untrimmed.bam.log" | samtools sort --threads 1 -o "data/bam/$s.01.sorted.untrimmed.bam" ; done
 ```
+
+The resulting BAM files can be found in the [`data/bam`](data/bam) folder.
