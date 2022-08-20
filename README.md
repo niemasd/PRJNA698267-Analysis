@@ -37,3 +37,14 @@ for s in $(cat data/fastq/SraAccList.txt) ; do minimap2 --sam-hit-only -t 1 -a -
 ```
 
 The resulting BAM files can be found in the [`data/bam`](data/bam) folder.
+
+# 2: Trimming BAMs + Sorting Trimmed BAMs
+I'm using [iVar v1.3.1](https://github.com/andersen-lab/ivar/releases/tag/v1.3.1) to quality trim the mapped reads, and I'm using [samtools v1.14](https://github.com/samtools/samtools/releases/tag/1.14) to sort the trimmed BAMs.
+
+```bash
+ivar trim -e -i SORTED_UNTRIMMED.BAM -p UNSORTED_TRIMMED_PREFIX
+samtools sort --threads 1 -o SORTED_TRIMMED.BAM UNSORTED_TRIMMED.BAM
+```
+* `-e` means "include reads without primers" (we're not trimming primers, as there were no primers to trim)
+
+
