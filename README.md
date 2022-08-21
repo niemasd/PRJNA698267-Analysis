@@ -55,3 +55,5 @@ I'm using [SamBamViz v0.0.9](https://github.com/niemasd/SamBamViz/releases/tag/0
 ```bash
 SamBamViz.py -i TRIMMED_SORTED.BAM -o OUT_TSV -q 20 --start_at_one
 ```
+
+The resulting SamBamViz output files can be found in the [`data/sambamviz`](data/sambamviz) folder and can be visualized in the [SamBamViz Web App](https://niema.net/SamBamViz).
