@@ -1,0 +1,22 @@
+[2022-08-21 10:14:40] Executing SamBamViz v0.0.9
+[2022-08-21 10:14:40] Using 1-based indexing
+[2022-08-21 10:14:40] Input file: data/trimmed_bam/SRR13615989.02.trimmed.sorted.bam
+[2022-08-21 10:14:40] Output file: data/trimmed_bam/SRR13615989.02.trimmed.sorted.bam.sambamviz.tsv
+[2022-08-21 10:14:40] Parsing input file...
+[2022-08-21 10:14:47] Parsed 50000 reads...
+[2022-08-21 10:14:54] Parsed 100000 reads...
+[2022-08-21 10:15:02] Parsed 150000 reads...
+[2022-08-21 10:15:02] Finished parsing input file
+[2022-08-21 10:15:02] - Number of reads: 151790
+[2022-08-21 10:15:02]   - Unmapped: 0
+[2022-08-21 10:15:02]   - Mapped: 151790
+[2022-08-21 10:15:02] - Average raw (unclipped) read length: 99.7804137294947
+[2022-08-21 10:15:02]   - Unmapped: N/A
+[2022-08-21 10:15:02]   - Mapped: 99.7804137294947
+[2022-08-21 10:15:02] - Average clipped read length: 97.86559061861783
+[2022-08-21 10:15:02]   - Unmapped: N/A
+[2022-08-21 10:15:02]   - Mapped: 97.86559061861783
+[2022-08-21 10:15:02] - Average insert size: N/A
+[2022-08-21 10:15:02] - Average coverage: 489.3372015249816
+[2022-08-21 10:15:02] Writing nucleotide counts...
+[2022-08-21 10:15:02] Finished writing nucleotide counts
