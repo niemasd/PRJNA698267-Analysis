@@ -47,4 +47,11 @@ samtools sort --threads 1 -o SORTED_TRIMMED.BAM UNSORTED_TRIMMED.BAM
 ```
 * `-e` means "include reads without primers" (we're not trimming primers, as there were no primers to trim)
 
+The resulting trimmed BAM files can be found in the [`data/trimmed_bam`](data/trimmed_bam) folder.
 
+# 3: Calculating Coverage
+I'm using [SamBamViz v0.0.9](https://github.com/niemasd/SamBamViz/releases/tag/0.0.9) to count the number of each base at each position of the genome from the trimmed BAMs. I'm using a minimum base quality score of 20 (`-q 20`) to match standard consensus calling approaches such as iVar Consensus.
+
+```bash
+SamBamViz.py -i TRIMMED_SORTED.BAM -o OUT_TSV -q 20 --start_at_one
+```
